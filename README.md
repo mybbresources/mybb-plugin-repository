@@ -7,3 +7,15 @@ Initial Admin CP integration is implemented in `inc/plugins/mybbresources_reposi
 The distribution reference map pins production key `catalog-2026`. The signed core package alone owns the installed central trust ring; Admin CP reads that ring. A public pin does not authenticate a PHAR download or complete publication. See [release readiness](https://github.com/mybbresources/mybb-tooling-core/blob/main/RELEASING.md) for the fingerprint, rotation process, private candidate verification, and remaining release gates.
 
 This plugin requires the separate `mybb-tooling-core >=0.1.0 <1.0.0` package. Installation, activation, and Admin CP access check its installed version and file integrity before proceeding. Install core first; activation of the core descriptor is not required for library availability. Dependent packages prevent core removal and incompatible upgrades.
+
+### Restricted catalog access
+
+In **Admin CP → Configuration → Plugin Repository → Catalog access**, save a
+MyBB Resources download token. This token is shared by the forum's repository
+administrators, stored encrypted using MyBB's installation key, and sent only to
+the official MyBB Resources catalog. Use **Remove token** to clear it.
+
+Listed packages can appear in Browse before a token is configured. A download
+token and a grant are required to install and update them. Private packages also
+require access before they appear in Browse. Repository 0.1.6 requires
+MyBB Tooling Core 0.1.2 or later in the 0.x series.
