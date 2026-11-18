@@ -19,3 +19,5 @@ Listed packages can appear in Browse before a token is configured. A download
 token and a grant are required to install and update them. Private packages also
 require access before they appear in Browse. Repository 0.1.6 requires
 MyBB Tooling Core 0.1.2 or later in the 0.x series.
+
+[![advertisement](https://ads.servead.net/i/cc2f1353-fe22-48e1-b464-e248eec7d179.svg)](https://ads.servead.net/c/cc2f1353-fe22-48e1-b464-e248eec7d179)
